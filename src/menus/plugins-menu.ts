@@ -125,7 +125,13 @@ export class PluginsMenu extends ScopedElementsMixin(LitElement) {
       font-weight: 400;
       line-height: normal;
       display: inline;
+      color: var(--oscd-base-00);
     }
+
+    oscd-filled-icon-button {
+      color: var(--oscd-base-00);
+    }
+
     oscd-menu {
       min-width: 350px;
       padding: 12px;

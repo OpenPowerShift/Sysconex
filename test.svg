@@ -1,0 +1,56 @@
+<svg
+    width="1920"
+    height="1200"
+    viewBox="0 0 1920 1200"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none">
+
+    <!-- Background -->
+    <rect width="1920" height="1200" fill="#f7f8f8" />
+
+    <!-- Soft gradient definitions -->
+    <defs>
+        <linearGradient id="lineBlue" x1="0" y1="0" x2="1920" y2="0">
+            <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.0" />
+            <stop offset="40%" stop-color="#94a3b8" stop-opacity="0.35" />
+            <stop offset="60%" stop-color="#94a3b8" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.0" />
+        </linearGradient>
+
+        <linearGradient id="lineOrange" x1="0" y1="0" x2="1920" y2="0">
+            <stop offset="0%" stop-color="#fb923c" stop-opacity="0.0" />
+            <stop offset="45%" stop-color="#fb923c" stop-opacity="0.35" />
+            <stop offset="55%" stop-color="#fb923c" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#fb923c" stop-opacity="0.0" />
+        </linearGradient>
+    </defs>
+
+    <!-- Primary flowing line -->
+    <path
+        d="M -200 720
+       C 300 660, 600 780, 960 740
+       C 1320 700, 1600 780, 2120 720"
+        stroke="url(#lineBlue)"
+        stroke-width="3"
+        fill="none" />
+
+    <!-- Secondary accent line -->
+    <path
+        d="M -200 760
+       C 350 820, 650 700, 1000 760
+       C 1350 820, 1650 720, 2120 780"
+        stroke="url(#lineOrange)"
+        stroke-width="2"
+        fill="none" />
+
+    <!-- Very subtle tertiary line -->
+    <path
+        d="M -200 800
+       C 500 820, 900 860, 1300 840
+       C 1600 820, 1850 860, 2120 840"
+        stroke="#475569"
+        stroke-opacity="0.15"
+        stroke-width="1.5"
+        fill="none" />
+
+</svg>

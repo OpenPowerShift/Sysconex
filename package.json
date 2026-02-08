@@ -1,10 +1,10 @@
 {
-  "name": "@omicronenergy/oscd-shell",
-  "version": "0.0.11",
-  "description": "The shell component of OpenSCD, where plugins are loaded and the application is initialized.",
+  "name": "@openpowershift/sysconex",
+  "version": "0.0.01",
+  "description": "A system configuration tool for IEC 61850 based on OpenSCD.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OMICRONEnergyOSS/oscd-shell.git"
+    "url": "git+https://github.com/OpenPowerShift/Sysconex.git"
   },
   "keywords": [
     "scl",
@@ -13,14 +13,16 @@
     "61850",
     "iec61850",
     "scd",
-    "omicronenergy"
+    "openpowershift",
+    "sysconex"
   ],
-  "author": "OMICRON Electronics GmbH",
+  "author": "OpenPowerShift",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/OMICRONEnergyOSS/oscd-shell/issues"
+    "url": "https://github.com/OpenPowerShift/Sysconex/issues"
   },
-  "homepage": "https://github.com/OMICRONEnergyOSS/oscd-shell#readme",
+  "homepage": "https://github.com/OpenPowerShift/Sysconex#readme",
+  "main": "main.js",
   "type": "module",
   "exports": {
     ".": "./dist/foundation.js",
@@ -38,16 +40,79 @@
     "localize": "lit-localize build",
     "build": "rimraf dist && mkdir dist && npm run extract && npm run localize && npm run analyze -- --exclude dist && tsc ",
     "bundle": "rimraf dist && npm run extract && npm run localize && rollup -c rollup.config.js",
-    "start": "npm run build && concurrently -k \"tsc --watch --preserveWatchOutput\" \"wds --open '/demo/' --node-resolve\"",
-    "start:bundle": "npm run bundle && concurrently -k -r \"rollup -c rollup.config.js --watch\" \"wds --root-dir dist --app-index demo/index.html --open '/demo/' --watch\"",
+    "start": "npm run build && concurrently -k \"tsc --watch --preserveWatchOutput\" \"wds --open '/' --node-resolve\"",
+    "start:bundle": "npm run bundle && concurrently -k -r \"rollup -c rollup.config.js --watch\" \"wds --root-dir dist --watch\"",
     "test": "npm run build && wtr --coverage --group unit",
     "test:watch": "npm run build && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --coverage --watch --group unit\"",
-    "analyze": "cem analyze --litelement --exclude demo/* --exclude dist/* --exclude *.spec.ts --exclude *.test.ts --exclude coverage/*",
+    "analyze": "cem analyze --litelement --exclude dist/* --exclude *.spec.ts --exclude *.test.ts --exclude coverage/*",
     "doc": "npm run analyze -- --exclude dist && typedoc --out dist/doc src/oscd-shell.ts src/foundation.ts",
     "test:visual": "npm run build && wtr --group visual",
     "test:update": "npm run build && wtr --group visual --update-visual-baseline",
     "deploy": "npm run bundle && npm run doc && gh-pages --dist 'dist' --nojekyll",
-    "prepare": "husky"
+    "prepare": "husky",
+    "electron:pack": "electron-builder build  --win --linux --x64 --dir",
+    "electron:build": "electron-builder build  --win --linux --x64",
+    "electron": "electron ."
+  },
+  "build": {
+    "productName": "OpenPowerShift Sysconex",
+    "appId": "com.openpowershift.sysconex",
+    "artifactName": "${name}_${os}_${arch}_${version}.${ext}",
+    "extends": "electron-builder.cjs",
+    "linux": {
+      "icon": "build/icons/linux/icon.png",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "OpenPowerShift"
+    },
+    "win": {
+      "icon": "build/icons/win/icon.ico",
+      "target": [
+        "nsis",
+        "portable",
+        "msi"
+      ],
+      "executableName": "Sysconex-alpha",
+      "fileAssociations": [
+        {
+          "ext": "scd"
+        },
+        {
+          "ext": "ssd"
+        },
+        {
+          "ext": "cid"
+        },
+        {
+          "ext": "icd"
+        },
+        {
+          "ext": "iid"
+        }
+      ],
+      "signAndEditExecutable": true
+    },
+    "msi": {
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "menuCategory": "Open Power Shift",
+      "oneClick": false,
+      "perMachine": true
+    },
+    "nsis": {
+      "artifactName": "${name}_${os}_${arch}_${version}_nsis.${ext}",
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "license": "LICENCE.txt",
+      "oneClick": false,
+      "perMachine": true,
+      "selectPerMachineByDefault": true,
+      "menuCategory": "Open Power Shift"
+    }
   },
   "dependencies": {
     "@lit/localize": "^0.12.2",
@@ -90,6 +155,8 @@
     "@web/test-runner-playwright": "0.11.1",
     "@web/test-runner-visual-regression": "0.9.0",
     "concurrently": "^9.2.1",
+    "electron": "^37.3.1",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-html": "^8.1.3",
@@ -103,6 +170,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "pixelmatch": "^7.1.0",
+    "playwright": "^1.54.1",
     "pngjs": "^7.0.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",

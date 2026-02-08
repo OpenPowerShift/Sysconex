@@ -7,11 +7,10 @@ node_modules
 
 ## build artifacts
 dist
+bundle
 coverage
 doc
 screenshots/*/failed/
 locales.ts
 locales
 custom-elements.json
-
-

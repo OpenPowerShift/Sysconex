@@ -74,14 +74,14 @@ export class OscdShell extends ScopedElementsMixin(LitElement) {
   appIcon: string = '';
 
   @property({ type: String })
-  appTitle: string = 'OpenSCD';
+  appTitle: string = 'Sysconex';
 
   @property({ type: String })
-  landingPageHeading: string = 'Welcome to OpenSCD';
+  landingPageHeading: string = 'Welcome to Sysconex';
 
   @property({ type: String })
   landingPageSubHeading: string =
-    'Open Source IEC-61850-6 SCL Editing Platform';
+    'A system configuration tool for digital substations';
 
   /** The file endings of editable files */
   @property({ type: Array, reflect: true }) editable = [
@@ -503,6 +503,7 @@ export class OscdShell extends ScopedElementsMixin(LitElement) {
         --oscd-theme-icon-font,
         'Material Symbols Outlined'
       );
+      --oscd-editor-menu-text: var(--ops-bg-lt-100, white);
 
       /* Fallbacks for Material Design variables */
       --md-sys-color-primary: var(--oscd-primary);
@@ -527,7 +528,7 @@ export class OscdShell extends ScopedElementsMixin(LitElement) {
       --md-icon-button-disabled-icon-color: var(--oscd-base3);
 
       /* MDC Theme Colors 
-       * Needed for supporting any pluggins still using the depricated MWC Components
+       * Needed for supporting any plugins still using the deprecated MWC Components
        */
       --mdc-theme-primary: var(--oscd-primary);
       --mdc-theme-secondary: var(--oscd-secondary);
@@ -537,9 +538,11 @@ export class OscdShell extends ScopedElementsMixin(LitElement) {
       --mdc-theme-on-secondary: var(--oscd-base3);
       --mdc-theme-on-background: var(--oscd-base00);
       --mdc-theme-on-surface: var(--oscd-base00);
-      --mdc-theme-text-primary-on-background: var(--oscd-base01);
-      --mdc-theme-text-secondary-on-background: var(--oscd-base3);
-      --mdc-theme-text-icon-on-background: var(--oscd-base3);
+      --mdc-theme-text-primary-on-background: var(--oscd-base00);
+      --mdc-theme-text-secondary-on-background: var(--oscd-base01);
+      --mdc-theme-text-icon-on-background: var(--oscd-base01);
+      --mdc-theme-text-hint-on-background: var(--oscd-base01);
+      /* --mdc-theme-text-disabled-on-light: white; */
       --mdc-theme-error: var(--oscd-error);
       --mdc-button-disabled-ink-color: var(--oscd-base1);
       --mdc-drawer-heading-ink-color: var(--oscd-base00);
@@ -549,6 +552,23 @@ export class OscdShell extends ScopedElementsMixin(LitElement) {
       --mdc-text-field-label-ink-color: var(--oscd-base01);
       --mdc-text-field-idle-line-color: var(--oscd-base00);
       --mdc-text-field-hover-line-color: var(--oscd-base02);
+      --mdc-text-field-outlined-hover-border-color: var(--oscd-base02);
+      --mdc-text-field-outlined-idle-border-color: var(--oscd-base01);
+      --mdc-text-field-icon-color: var(--oscd-base01);
+      --mdc-text-field-icon-hover-color: var(--oscd-base00);
+      --mdc-text-field-icon-focus-color: var(--oscd-primary);
+      --mdc-text-field-disabled-icon-color: var(--oscd-base1);
+      /* --mdc-text-field-fill-color: white;
+      --mdc-text-field-ink-color: red;
+      --mdc-text-field-label-ink-color: white;
+      --mdc-text-field-idle-line-color: white;
+      --mdc-text-field-hover-line-color: white;
+      --mdc-text-field-outlined-hover-border-color: white;
+      --mdc-text-field-outlined-idle-border-color: white;
+      --mdc-text-field-icon-color: white;
+      --mdc-text-field-icon-hover-color: white;
+      --mdc-text-field-icon-focus-color: white;
+      --mdc-text-field-disabled-icon-color: white; */
       --mdc-select-fill-color: var(--oscd-base2);
       --mdc-select-ink-color: var(--oscd-base02);
       --mdc-select-label-ink-color: var(--oscd-base01);

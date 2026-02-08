@@ -1,0 +1,34 @@
+* {
+  --ops-primary-light: #cb4b16;
+  /* alternatives #de8034, #cb4b16 */
+  --ops-landing-light: #ed8733;
+  --ops-secondary-light: #3790c8;
+  
+  --ops-primary-dark: #cb4b16;  
+  --ops-landing-dark: #fed7aa;
+  --ops-secondary-dark: #9dc6ff;
+
+  --ops-error-red: #dc2626;
+
+  --ops-bg-lt-50: #fbfbfb;
+  --ops-bg-lt-100: #f7f8f8;
+  --ops-bg-lt-200: #edeef0;
+  --ops-bg-lt-300: #e0e2e6;
+  --ops-bg-lt-400: #bdc3cb;
+  --ops-bg-lt-500: #95a0ad;
+  --ops-bg-lt-600: #6f7c8a;
+  --ops-bg-lt-700: #535e68;
+  --ops-bg-lt-800: #394046;
+  --ops-bg-lt-900: #23282c;
+
+  --ops-bg-dk-50: #fbfbfb;
+  --ops-bg-dk-100: #f7f8f9;
+  --ops-bg-dk-200: #eef0f1;
+  --ops-bg-dk-300: #e1e4e7;
+  --ops-bg-dk-400: #bec4ca;
+  --ops-bg-dk-500: #96a0a9;
+  --ops-bg-dk-600: #717c86;
+  --ops-bg-dk-700: #555e66;
+  --ops-bg-dk-800: #3a4045;
+  --ops-bg-dk-900: #24282b;
+}

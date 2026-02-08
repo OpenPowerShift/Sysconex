@@ -1,0 +1,36 @@
+= Sysconex - An IEC 61850 System Configuration Tool
+:nofooter:
+:uri-pages: https://openpowershift.github.io/sysconex/
+:uri-releases: https://github.com/OpenPowerShift/Sysconex/releases
+:uri-issues: https://github.com/OpenPowerShift/Sysconex/issues
+:email-contact: info@openpowershift.com?subject=Sysconex%20services
+
+[cols="1*^.^1,1*<.^5",frame=none,grid=none]
+|===
+a|image::build/icons/linux/icon.png[width=64float=left] a| Sysconex is a _light-weight_, _next generation_ system configurator for IEC 61850.
+|===
+
+Sysconex has a focus on a general user that wants to be close to the process described in the standard and to build digital substations using IEDs currently available on the market. {uri-pages}[Try it out]
+
+Or download a standalone installer from the {uri-releases}[release page].
+
+OpenPowerShift provides services to customise, theme and develop Sysconex for client's specific needs and workflows.
+mailto:{email-contact}[Contact us] to discuss.
+
+.Not ready for production use
+[IMPORTANT]
+====
+This project is under development.
+This project is not intended to be used for actual device configurations at this time and should be considered a prototype unless verified by end-users for specific use-cases (e.g. proof of concept implementations, testing with specific devices or as part of a structured workflow or development process).
+====
+
+If you decide to use it, please provide feedback to help us improve the tool by logging {uri-issues}[issues].
+
+== Privacy
+
+Sysconex does not upload any information of any kind.  
+Your browser only downloads files; it never sends data anywhere.
+
+When you open the {uri-pages}[Sysconex] editor, all JavaScript required to run the application is downloaded and executed locally in your browser.
+
+Because of this design, you can continue working offline once the page has been loaded.

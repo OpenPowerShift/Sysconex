@@ -3,15 +3,11 @@ import typescript from '@rollup/plugin-typescript';
 import copy from 'rollup-plugin-copy';
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 
-import fs, { readdirSync } from 'fs';
+import { readdirSync } from 'fs';
 
 import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
 
-const tsconfig = JSON.parse(fs.readFileSync('./tsconfig.json', 'utf8'));
-const demoTsconfig = {
-  ...tsconfig,
-  compilerOptions: { ...tsconfig.compilerOptions, outDir: 'dist/demo' },
-};
+const outputDir = 'bundle';
 
 const locales = readdirSync('src/locales').map(locale => ({
   input: `src/locales/${locale}`,
@@ -60,29 +56,33 @@ export default [
     ],
   },
   {
-    input: 'demo/index.html',
+    input: 'index.html',
     plugins: [
       html({
-        input: 'demo/index.html',
+        input: 'index.html',
         minify: true,
       }),
       copy({
         targets: [
           {
-            src: 'demo/*.*',
-            dest: 'dist/demo',
-            ignore: ['demo/index.js', 'demo/index.html'],
+            src: [
+              'favicon.ico',
+              'fonts',
+              'background.svg',
+              '*.css',
+              'oscd-logo.jpeg',
+            ],
+            dest: `${outputDir}`,
           },
         ],
         verbose: true,
         flatten: false,
       }),
       nodeResolve(),
-      typescript(demoTsconfig),
       importMetaAssets({ warnOnError: true }),
     ],
     output: {
-      dir: 'dist/demo',
+      dir: outputDir,
       format: 'es',
       sourcemap: true,
     },

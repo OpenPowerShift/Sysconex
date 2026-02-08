@@ -64,6 +64,9 @@ export class LandingPage extends ScopedElementsMixin(LitElement) {
             </oscd-text-button> `,
         )}
       </div>
+      <div class="logo-openscd">
+        Powered by <img src="./oscd-logo.jpeg" alt="OpenSCD Logo" width="100" />
+      </div>
     `;
   }
 
@@ -77,9 +80,9 @@ export class LandingPage extends ScopedElementsMixin(LitElement) {
     }
 
     .heading {
-      color: var(--oscd-base3);
+      color: var(--oscd-theme-primary);
       text-align: center;
-      font-family: 'Roboto';
+      font-family: var(--oscd-theme-text-font);
       font-size: 50px;
       font-style: normal;
       font-weight: 600;
@@ -92,10 +95,10 @@ export class LandingPage extends ScopedElementsMixin(LitElement) {
     }
 
     .sub-heading {
-      color: var(--oscd-base3);
+      color: var(--oscd-theme-primary);
       text-align: center;
-      font-family: Roboto;
-      font-size: 16.909px;
+      font-family: var(--oscd-theme-text-font);
+      font-size: 24px;
       font-style: normal;
       font-weight: 400;
       line-height: 65.194px; /* 385.56% */
@@ -121,7 +124,7 @@ export class LandingPage extends ScopedElementsMixin(LitElement) {
       text-align: center;
       padding: 8px;
       color: var(--oscd-base3);
-      background: var(--oscd-primary);
+      background: var(--oscd-base01);
       transition: background-color 0.3s;
       cursor: pointer;
     }
@@ -164,6 +167,17 @@ export class LandingPage extends ScopedElementsMixin(LitElement) {
         var(--omicron-yellow) 50%,
         transparent 50%
       );
+    }
+
+    .logo-openscd {
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      color: var(--oscd-base3);
+      position: absolute;
+      text-align: center;
+      right: 10px;
+      bottom: 10px;
+      width: 100px;
     }
   `;
 }
