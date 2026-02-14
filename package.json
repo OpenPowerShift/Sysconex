@@ -1,6 +1,6 @@
 {
   "name": "@openpowershift/sysconex",
-  "version": "0.0.01",
+  "version": "0.0.2",
   "description": "A system configuration tool for IEC 61850 based on OpenSCD.",
   "repository": {
     "type": "git",
