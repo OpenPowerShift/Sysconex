@@ -8,19 +8,22 @@
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Material+Symbols+Outlined&display=block"
     />
     <link rel="stylesheet" href="./colors.css" />
     <link rel="stylesheet" href="./theming.css" />
   </head>
   <body>
-    <oscd-shell locale="en"> </oscd-shell>
-    <script type="module">
-      // Known issue, scoped registry polyfill doesn't load as fast as oscd-shell, causing oscd-shell to fail.
-      // To safeguard, we await the polyfill first, then load the rest.
-      await import('@webcomponents/scoped-custom-element-registry');
-      await import('./dist/oscd-shell.js');
-      await import('./index-web.js');
-    </script>
+    <oscd-shell
+      locale="en"
+      appTitle="Sysconex"
+      landingPageHeading="Welcome to Sysconex"
+      landingPageSubHeading="A system configuration tool for digital substations"
+    ></oscd-shell>
+    <script type="module" src="index-web.js"></script>
   </body>
 </html>

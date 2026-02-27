@@ -122,6 +122,7 @@
     "@omicronenergy/oscd-menu-commons": "^0.0.1",
     "@omicronenergy/oscd-menu-open": "^0.0.6",
     "@omicronenergy/oscd-menu-save": "^0.0.2",
+    "@omicronenergy/oscd-shell": "^0.0.13",
     "@omicronenergy/oscd-test-utils": "^0.0.8",
     "@omicronenergy/oscd-ui": "^0.0.9",
     "@open-wc/scoped-elements": "^3.0.6",
