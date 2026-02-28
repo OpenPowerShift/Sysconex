@@ -4,8 +4,8 @@
   --ops-landing-light: #ed8733;
   --ops-secondary-light: #3790c8;
   
-  --ops-primary-dark: #cb4b16;  
-  --ops-landing-dark: #fed7aa;
+  --ops-primary-dark: #cb4b16;
+  --ops-landing-dark: #c7d8ee;
   --ops-secondary-dark: #9dc6ff;
 
   --ops-error-red: #dc2626;
@@ -21,14 +21,15 @@
   --ops-bg-lt-800: #2a3036; /* L* ~20 */
   --ops-bg-lt-900: #1f2428; /* L* ~15 */
 
-  --ops-bg-dk-50:  #f5f6f7;
-  --ops-bg-dk-100: #e8eaed;
-  --ops-bg-dk-200: #8c99a6;
-  --ops-bg-dk-300: #7d8a97;
-  --ops-bg-dk-400: #74818d;
-  --ops-bg-dk-500: #667380;
-  --ops-bg-dk-600: #5a6672;
-  --ops-bg-dk-700: #404a54;
-  --ops-bg-dk-800: #2a3036;
-  --ops-bg-dk-900: #1f2428;
+  --ops-bg-dk-50:  #d6e3f0;
+  --ops-bg-dk-100: #c7d5e4;
+  --ops-bg-dk-200: #9aa8b6;
+  --ops-bg-dk-300: #8897a6;
+  --ops-bg-dk-400: #768594;
+  --ops-bg-dk-500: #667584;
+  --ops-bg-dk-600: #566473;
+  --ops-bg-dk-700: #434f5b;
+  --ops-bg-dk-800: #303841;
+  --ops-bg-dk-900: #242b33;
+  
 }

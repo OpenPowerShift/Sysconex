@@ -1,5 +1,6 @@
 import '@webcomponents/scoped-custom-element-registry';
 import '@omicronenergy/oscd-shell/oscd-shell.js';
+import './src/landing-page/local-landing-page.js';
 import OscdMenuOpen from '@omicronenergy/oscd-menu-open';
 import OscdMenuSave from '@omicronenergy/oscd-menu-save';
 import {
@@ -35,6 +36,7 @@ registry.define('oscd-background-editv1', OscdBackgroundEditV1);
 registry.define('oscd-background-wizard-events', OscdBackgroundWizardEvents);
 
 oscdShell.plugins = plugins;
+oscdShell.dispatchEvent(new CustomEvent('plugins-updated'));
 
 const params = new URL(document.location).searchParams;
 for (const [name, value] of params) {

@@ -1,9 +1,17 @@
-import './dist/oscd-shell.js';
+import '@omicronenergy/oscd-shell/oscd-shell.js';
+import './src/landing-page/local-landing-page.js';
 import { plugins } from './plugins.js';
 
 const oscdShell = document.querySelector('oscd-shell');
 
+if (!oscdShell.querySelector('[slot="landing-page"]')) {
+  const landingPage = document.createElement('sysconex-landing-page');
+  landingPage.setAttribute('slot', 'landing-page');
+  oscdShell.append(landingPage);
+}
+
 oscdShell.plugins = plugins;
+oscdShell.dispatchEvent(new CustomEvent('plugins-updated'));
 
 const params = new URL(document.location).searchParams;
 for (const [name, value] of params) {
