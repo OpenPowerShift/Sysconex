@@ -117,6 +117,7 @@
   "dependencies": {
     "@lit/localize": "^0.12.2",
     "@omicronenergy/oscd-background-editv1": "^0.0.6",
+    "@omicronenergy/oscd-background-wizard-events": "^0.0.1",
     "@omicronenergy/oscd-editor": "^1.7.1",
     "@omicronenergy/oscd-editor-source": "^0.0.1",
     "@omicronenergy/oscd-menu-commons": "^0.0.1",

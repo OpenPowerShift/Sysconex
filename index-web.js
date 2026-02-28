@@ -9,6 +9,7 @@ import {
 } from '@omicronenergy/oscd-menu-commons';
 import OscdBackgroundEditV1 from '@omicronenergy/oscd-background-editv1';
 import OscdEditorSource from '@omicronenergy/oscd-editor-source';
+import OscdBackgroundWizardEvents from '@omicronenergy/oscd-background-wizard-events/oscd-background-wizard-events.js';
 import { plugins } from './plugins.js';
 
 const _customElementsDefine = window.customElements.define;
@@ -29,8 +30,9 @@ registry.define('oscd-menu-save', OscdMenuSave);
 registry.define('oscd-menu-new', OscdMenuNew);
 registry.define('oscd-menu-file-rename', OscdMenuFileRename);
 registry.define('oscd-menu-file-close', OscdMenuFileClose);
-registry.define('oscd-background-editv1', OscdBackgroundEditV1);
 registry.define('oscd-editor-source', OscdEditorSource);
+registry.define('oscd-background-editv1', OscdBackgroundEditV1);
+registry.define('oscd-background-wizard-events', OscdBackgroundWizardEvents);
 
 oscdShell.plugins = plugins;
 
