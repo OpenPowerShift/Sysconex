@@ -115,10 +115,10 @@ export const plugins = {
   ],
   editor: [
     {
-      name: 'Design Substation',
+      name: 'Design SLD',
       icon: 'add_box',
       requireDoc: true,
-      src: 'https://danyill.github.io/oscd-designer/oscd-designer.js',
+      src: 'https://omicronenergyoss.github.io/oscd-editor-sld/oscd-editor-sld.js',
     },
     {
       name: 'Edit Substation',
@@ -127,8 +127,8 @@ export const plugins = {
       src: 'https://OpenEnergyTools.github.io/scl-substation-editor/scl-substation-editor.js',
     },
     {
-      name: 'View Communication',
-      icon: 'network_node',
+      name: 'Edit Communication',
+      icon: 'hub',
       requireDoc: true,
       src: 'https://danyill.github.io/scl-communication-editor/scl-communication-editor.js',
     },
@@ -137,12 +137,6 @@ export const plugins = {
       icon: 'lan',
       requireDoc: true,
       src: 'https://sprinteins.github.io/oscd-plugins/oscd-plugins.js',
-    },
-    {
-      name: 'Edit Communication',
-      icon: 'edit',
-      requireDoc: true,
-      src: 'https://openenergytools.github.io/scl-communication/scl-communication.js',
     },
     {
       name: 'Subscribe (Later Binding)',
@@ -173,6 +167,12 @@ export const plugins = {
       icon: 'auto_fix_normal',
       requireDoc: true,
       src: 'https://danyill.github.io/oscd-tp-multicast-naming/oscd-tp-multicast-naming.js',
+    },
+    {
+      name: 'Communicate',
+      icon: 'network_node',
+      requireDoc: true,
+      src: 'https://openenergytools.github.io/scl-communication/scl-communication.js',
     },
     {
       name: 'Configure Network (TP)',
