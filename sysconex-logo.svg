@@ -1,0 +1,31 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Connection grid -->
+  <line x1="30" y1="30" x2="50" y2="50" stroke="#bdc3cb" stroke-width="2" opacity="0.5"/>
+  <line x1="70" y1="30" x2="50" y2="50" stroke="#bdc3cb" stroke-width="2" opacity="0.5"/>
+  <line x1="30" y1="70" x2="50" y2="50" stroke="#bdc3cb" stroke-width="2" opacity="0.5"/>
+  <line x1="70" y1="70" x2="50" y2="50" stroke="#bdc3cb" stroke-width="2" opacity="0.5"/>
+  
+  <line x1="30" y1="30" x2="70" y2="30" stroke="#bdc3cb" stroke-width="2" opacity="0.3"/>
+  <line x1="70" y1="30" x2="70" y2="70" stroke="#bdc3cb" stroke-width="2" opacity="0.3"/>
+  <line x1="70" y1="70" x2="30" y2="70" stroke="#bdc3cb" stroke-width="2" opacity="0.3"/>
+  <line x1="30" y1="70" x2="30" y2="30" stroke="#bdc3cb" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Quantum nodes with glow -->
+  <circle cx="30" cy="30" r="10" fill="#475569"/>
+  <circle cx="30" cy="30" r="6" fill="#94a3b8"/>
+  
+  <circle cx="70" cy="30" r="10" fill="#475569"/>
+  <circle cx="70" cy="30" r="6" fill="#94a3b8"/>
+  
+  <circle cx="30" cy="70" r="10" fill="#6f7c8a"/>
+  <circle cx="30" cy="70" r="6" fill="#94a3b8"/>
+  
+  <circle cx="70" cy="70" r="10" fill="#6f7c8a"/>
+  <circle cx="70" cy="70" r="6" fill="#94a3b8"/>
+  
+  <!-- Central quantum core -->
+  <circle cx="50" cy="50" r="14" fill="#fb923c"/>
+  <circle cx="50" cy="50" r="10" fill="#fed7aa"/>
+  <circle cx="50" cy="50" r="6" fill="#fb923c"/>
+  <circle cx="50" cy="50" r="14" fill="#fb923c" opacity="0.2"/>
+</svg>

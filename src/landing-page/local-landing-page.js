@@ -115,7 +115,6 @@ export class SysconexLandingPage extends ScopedElementsMixin(LitElement) {
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-
       margin-block-start: 64px;
       margin-block-end: 8px;
 
@@ -130,7 +129,6 @@ export class SysconexLandingPage extends ScopedElementsMixin(LitElement) {
       font-style: normal;
       font-weight: 400;
       line-height: 65.194px;
-
       margin-block-end: 168px;
     }
 
@@ -200,7 +198,7 @@ export class SysconexLandingPage extends ScopedElementsMixin(LitElement) {
     .logo-openscd {
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      color: var(--oscd-base3);
+      color: white;
       position: absolute;
       text-align: center;
       right: 10px;

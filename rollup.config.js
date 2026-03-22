@@ -39,11 +39,11 @@ export default [
       copy({
         targets: [
           {
-            src: ['favicon.ico', 'fonts', 'background.svg', '*.css'],
+            src: ['fonts', 'background.svg', '*.css'],
             dest: `${outputDir}/assets`,
           },
           {
-            src: ['plugins'],
+            src: ['plugins', 'oscd-logo.jpeg', 'sysconex-logo.svg', 'CNAME'],
             dest: `${outputDir}`,
           },
           // Add more patterns if you have more assets

@@ -53,7 +53,7 @@ export const plugins = {
       src: 'https://danyill.github.io/oscd-import-ieds/oscd-import-ieds.js',
     },
     {
-      name: 'Add Templates IEDs...',
+      name: 'Add Template IEDs...',
       icon: 'package_2',
       requireDoc: true,
       src: 'https://danyill.github.io/oscd-import-templates/oscd-import-templates.js',
@@ -190,7 +190,7 @@ export const plugins = {
       name: 'Source Editor',
       icon: 'code',
       requireDoc: true,
-      tagName: 'oscd-editor-source',
+      src: 'https://OMICRONEnergyOSS.github.io/oscd-editor-source/oscd-editor-source.js',
     },
     {
       name: 'Describe',

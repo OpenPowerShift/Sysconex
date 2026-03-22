@@ -4,9 +4,9 @@
   --ops-landing-light: #ed8733;
   --ops-secondary-light: #3790c8;
   
-  --ops-primary-dark: #cb4b16;
+  --ops-primary-dark: #f97316;
   --ops-landing-dark: #c7d8ee;
-  --ops-secondary-dark: #9dc6ff;
+  --ops-secondary-dark: #85b6fb;
 
   --ops-error-red: #dc2626;
 
@@ -30,6 +30,6 @@
   --ops-bg-dk-600: #566473;
   --ops-bg-dk-700: #434f5b;
   --ops-bg-dk-800: #303841;
-  --ops-bg-dk-900: #242b33;
+  --ops-bg-dk-900: #161a1f;
   
 }
