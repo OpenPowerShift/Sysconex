@@ -7917,7 +7917,6 @@ class SysconexLandingPage extends ScopedElementsMixin(i$3) {
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-
       margin-block-start: 64px;
       margin-block-end: 8px;
 
@@ -7932,7 +7931,6 @@ class SysconexLandingPage extends ScopedElementsMixin(i$3) {
       font-style: normal;
       font-weight: 400;
       line-height: 65.194px;
-
       margin-block-end: 168px;
     }
 
@@ -8002,7 +8000,7 @@ class SysconexLandingPage extends ScopedElementsMixin(i$3) {
     .logo-openscd {
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      color: var(--oscd-base3);
+      color: white;
       position: absolute;
       text-align: center;
       right: 10px;
@@ -98939,7 +98937,7 @@ const plugins = {
       src: 'https://danyill.github.io/oscd-import-ieds/oscd-import-ieds.js',
     },
     {
-      name: 'Add Templates IEDs...',
+      name: 'Add Template IEDs...',
       icon: 'package_2',
       requireDoc: true,
       src: 'https://danyill.github.io/oscd-import-templates/oscd-import-templates.js',
@@ -99076,7 +99074,7 @@ const plugins = {
       name: 'Source Editor',
       icon: 'code',
       requireDoc: true,
-      tagName: 'oscd-editor-source',
+      src: 'https://OMICRONEnergyOSS.github.io/oscd-editor-source/oscd-editor-source.js',
     },
     {
       name: 'Describe',

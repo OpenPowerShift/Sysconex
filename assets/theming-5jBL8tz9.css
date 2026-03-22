@@ -47,7 +47,7 @@
     /* optional emphasized content */
     --oscd-theme-base01: var(--ops-bg-dk-200);
     /* body text / primary content */
-    --oscd-theme-base00: var(--ops-bg-dk-100);
+    --oscd-theme-base00: var(--ops-bg-dk-50);
 
     --oscd-theme-base0: var(--ops-bg-dk-400);
     /* comments/secondary content */
