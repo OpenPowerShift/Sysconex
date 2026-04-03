@@ -99071,6 +99071,13 @@ const plugins = {
       src: 'https://OMICRONEnergyOSS.github.io/oscd-editor-diff/oscd-editor-diff.js',
     },
     {
+      name: 'Cleanup',
+      translations: { de: 'Bereinigung' },
+      icon: 'cleaning_services',
+      requireDoc: true,
+      src: 'https://openpowershift.github.io/oscd-editor-cleanup/oscd-editor-cleanup.js',
+    },
+    {
       name: 'Source Editor',
       icon: 'code',
       requireDoc: true,
